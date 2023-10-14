@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Tech Stack for a React Widget:
+React: For building the UI components of the widget.
+Webpack: To bundle the widget into a single JavaScript file.
+Babel: To transpile JSX and ES6+ code to ensure compatibility with most browsers.
+Styled-components or Emotion: For styling to ensure that styles are encapsulated and don't leak or interfere with the host website.

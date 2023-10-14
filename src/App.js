@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Widget from './Widget.js';
+import { configureAbly } from "@ably-labs/react-hooks"
+
+const clientId =   
+   Math.random().toString(36).substring(2, 15) +
+   Math.random().toString(36).substring(2, 15);
+
+
+
+configureAbly({
+  // authUrl: `${prefix}/api/createTokenRequest?clientId=${clientId}`,
+  key: "_Y_E9g.l-JtJw:SCQpYS_oEYQXArvL61PsRpnJ-IUd91ueKeOgvx6Q5NU",
+  clientId
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Widget />
   );
 }
 

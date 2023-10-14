@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+const widgetContainer = document.getElementById('root');
+const prospectID = widgetContainer.getAttribute('prospectId');
+console.log(prospectID, "prospectID")
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
