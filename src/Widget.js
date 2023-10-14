@@ -19,6 +19,11 @@ import {
 
   import './index.css';
  
+
+    const widgetContainer = document.getElementById('root');
+    const prospectID = widgetContainer.getAttribute('prospectId');
+    console.log(prospectID, "prospectID")
+
   const updateChatbotMessage = (conversation, message) => {
     const interactionId = message.data.interactionId;
 
@@ -104,12 +109,12 @@ function Widget() {
         console.log(numberOfUserMessages,"conver",conversationStatus)
         try {
             setBotIsTyping(true);
-          const response = await fetch("http://127.0.0.1:3000/chat", {
+          const response = await fetch("https://fitmentalhelp.com/chat", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ numberOfUserMessages, initialStatus: conversationStatus, history, query: input, userId:"2023dcdf-5fd7-41d5-97a0-17ee2b03040d", source:false, streaming:true }), // Include the selected topic in the user input
+            body: JSON.stringify({ numberOfUserMessages, initialStatus: conversationStatus, history, query: input, userId:prospectID, source:false, streaming:true }), // Include the selected topic in the user input
           });
 
           const responseData = await response.json();
